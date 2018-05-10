@@ -1,52 +1,72 @@
-class BuyProduct
-  def
-  end
-end
-
-
-class Customer
-  def
-  end
-end
-
-
-class Shopkeeper
-  def
-  end
-end
-
-
-class Product
-  def add
-
-  end
-end
-
-  def add
-    puts "Name of product"
-    p_name = gets
-    puts "Price of product"
-    p_price = gets.to_i
-    puts "Stock item"
-    s_item = gets.to_i
-    puts "Company name of product"
-    c_name = gets
-
-    #somefile=File.open("inventory.txt","a")
-    #somefile.write "#{p_name} #{p_price} #{s_item} #{c_name}"
-  end
-
-  def customer_options
-    puts "List"
-    puts "Search"
-    puts "Buy"
-
-  end
-
-end
-
-puts "Enter Shopkeeper to Customer"
+puts "Enter Shopkeeper or Customer"
 puts "Press 1 for Shopkeeper"
 puts "Press 2 for Customer"
 p1=gets.to_i
+
+case p1
+  when 1
+  puts "Select options"
+  p2=gets.to_i
+  puts "1.Add"
+  puts "2.Remove"
+  puts "3.List"
+  puts "4.Search"
+  puts "5.Edit"
+
+case p2
+  when 1
+    class_store1=Product.new
+    class_store1.add_product
+  when 2
+    class_store2=ProductAction.new
+    class_store2.remove_product
+  when 3
+    class_store2=ProductAction.new
+    class_store2.list_product
+  when 4
+    class_store2=ProductAction.new
+    class_store2.research_product
+  when 5
+    class_store2=ProductAction.new
+    class_store2.edit_product
+  else
+    puts "Invalid option"
+  end
+
+when 2
+  puts "Select options"
+  p3=gets.to_i
+  puts "1.List"
+  puts "2.Search"
+  puts "3.Buy"
+
+case p3
+  when 1
+    class_store2=Inventory.new
+    class_store2.list_product
+  when 2
+    class_store2=Inventory.new
+    class_store2.search_product
+  when 3
+    class_store3=Buy.new
+    class_store3.buy_product
+  else
+    puts "Invalid"
+  end
+else
+  puts "Invalid"
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
