@@ -71,7 +71,7 @@ def rep(hash_1,arr_1)
   hash_dupl = hash_1.zip
   hash_1=arr[i]
 
-  #hash_1.each_with_index{|(key,val) i| hash_dupl = arr_1[i]}
+  #hash_1.each_with_index{|(key,val) i| hash_dupl = arr_1[i]}.
   puts hash_dupl
 end
   puts rep(hash_1,arr_1)
